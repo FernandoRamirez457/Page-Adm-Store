@@ -1,0 +1,192 @@
+.main {
+  position: relative;
+}
+
+.btn-return {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  top: 28px;
+  left: 50px;
+}
+
+.introduction {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.introduction .content-introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.introduction .content-introduction h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.introduction .content-introduction p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.introduction .btn-add-product {
+  padding: 10px 30px;
+  background-color: #25292e;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.filtros-base {
+  width: 100%;
+  height: auto;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.filtros {
+  display: flex;
+  gap: 30px;
+}
+
+.filtros .category-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.filtros .category-user p {
+  font-size: 16px;
+}
+
+.filtros .category-user input {
+  padding: 15px;
+  width: 50px;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+
+.search-container {
+  height: 36px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  border-radius: 7px;
+  padding: 1px;
+  gap: 1px;
+}
+
+.search-container .search-input {
+  height: 34px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  padding-left: 20px;
+}
+
+.search-container .search-icon {
+  background-color: white;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  color: rgb(64, 64, 64);
+  border-radius: 0 6px 6px 0;
+}
+
+.transactions {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 50px;
+}
+
+.transactions table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transactions table th,
+.transactions table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.transactions table th {
+  background-color: #f4f4f4;
+}
+
+.transactions table .treated {
+  color: green;
+}
+
+.transactions table .received {
+  color: blue;
+}
+
+.transactions table .available .status {
+  padding: 5px 10px;
+  width: 130px;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid rgb(0, 194, 0);
+  color: rgb(0, 194, 0);
+  font-weight: 600;
+}
+
+.transactions table .update,
+.transactions table .delete {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+.transactions table .update,
+.transactions table .delete {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+.transactions table .method {
+  display: flex;
+  gap: 10px;
+}
+
+.transactions table .update {
+  color: #3881ff;
+  border: 3px solid #3881ff;
+  background-color: white;
+}
+
+.transactions table .delete {
+  color: #e62e00;
+  border: 3px solid #e62e00;
+  background-color: white;
+}

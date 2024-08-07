@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page - Products</title>
+    <link rel="stylesheet" href="./css/assets/main.css">
+    <link rel="stylesheet" href="./css/produtos.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+    <aside>
+        <div class="sidebar">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logo_adm_branco_v.png" alt="NSA Online Logo"></a>
+            </div>
+            <ul>
+                <li><a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href=""><i class="fa-solid fa-chart-line"></i>Dashboard</a></li>
+                <li><a href=""><i class="fa-solid fa-calendar"></i>Calendar</a></li>
+                <li><a href=""><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+                <li><a href=""><i class="fa-solid fa-font-awesome"></i>Events</a></li>
+                <li><a href=""><i class="fa-solid fa-rectangle-list"></i>Forms</a></li>
+            </ul>
+            <div class="suporte">
+                <ul>
+                    <li><a href=""><i class="fas fa-user"></i>Gabriel Carvalho</a></li>
+                    <li><a href=""><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="btn-return"><i class="fa-solid fa-arrow-left" style="color: #18212f;"></i></div>
+        <div class="introduction">
+            <div class="content-introduction">
+                <h3>Produtos</h3>
+                <p>Todos os Produtos cadastrados</p>
+            </div>
+            <button class="btn-add-product">+&emsp;Add Product</button>
+        </div>
+
+        <hr style="border-color: rgb(215, 215, 215); margin: 0 50px;">
+        <br><br>
+
+        <div class="filtros-base">
+            <div class="filtros">
+                <div class="category-product">
+                    <p>Todos</p>
+                    <input type="text" value="20" disabled>
+                </div>
+
+                <div class="category-product">
+                    <p>Disponíveis</p>
+                    <input type="text" value="10" disabled>
+                </div>
+
+                <div class="category-product">
+                    <p>Sem Estoque</p>
+                    <input type="text" value="14" disabled>
+                </div>
+
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search" />
+                <label for="search-input" class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </div>
+        </div>
+
+        <div class="container-products">
+        </div>
+
+
+        <div class="modal" id="modalAdd">
+            <div class="form">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <div class="form-content">
+                    <h1 class="title-form">Adicionar Produto</h1>
+                    <form action="#" class="form-add">
+                        <div class="field input-field">
+                            <label for="title">Title:</label>
+                            <input type="text" name="title" class="input" required>
+                        </div>
+                        <div class="field input-field">
+                            <label for="price">Price:</label>
+                            <input type="number" name="price" class="input" min="0" required>
+                        </div>
+                        <div class="field input-field">
+                            <label for="description">Description:</label>
+                            <textarea type="text" name="description" class="input" required></textarea>
+                        </div>
+                        <div class="field input-field category-input">
+                            <label for="category">Category:</label>
+                            <input type="text" name="category" class="input" required>
+                        </div>
+
+                        <div class="field input-field file-input">
+                            <label for="image">Add an image:</label>
+                            <input type="file" name="image" placeholder="image" required>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Adicionar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modalUpd">
+            <div class="form">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <div class="form-content">
+                    <h1 class="title-form">Atualizar Produto</h1>
+                    <form action="#" class="form-upd">
+                        <div class="field input-field">
+                            <label for="title">Title:</label>
+                            <input type="text" name="title" class="input" required>
+                        </div>
+                        <div class="field input-field">
+                            <label for="price">Price:</label>
+                            <input type="number" name="price" class="input" min="0" required>
+                        </div>
+                        <div class="field input-field">
+                            <label for="description">Description:</label>
+                            <textarea type="text" name="description" class="input" required></textarea>
+                        </div>
+                        <div class="field input-field category-input">
+                            <label for="category">Category:</label>
+                            <input type="text" name="category" class="input" required>
+                        </div>
+
+                        <div class="field input-field file-input">
+                            <label for="image">Add an image:</label>
+                            <input type="file" name="image" placeholder="image" required>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Adicionar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modalPatch">
+            <div class="base-form">
+                <div class="base-btn-add-input">
+                    <div class="btn-plus" tabindex="0"><i class="fa-solid fa-plus"></i></div>
+                    <div class="content-btn">
+                        <button class="btn_add_input" id="title">
+                            <i class="fa-solid fa-text-slash icon"></i>
+                            <p class="text">Title</p>
+                        </button>
+                        <button class="btn_add_input" id="price">
+                            <i class="fa-solid fa-money-bill-1 icon"></i>
+                            <p class="text">Price</p>
+                        </button>
+                        <button class="btn_add_input" id="description">
+                            <i class="fa-solid fa-message icon"></i>
+                            <p class="text">Description</p>
+                        </button>
+                        <button class="btn_add_input" id="category">
+                            <i class="fa-solid fa-layer-group icon"></i>
+                            <p class="text">Category</p>
+                        </button>
+                        <button class="btn_add_input" id="file">
+                            <i class="fa-solid fa-file-pen icon"></i>
+                            <p class="text">File</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="form">
+                    <span id="closeModalBtn" class="close">&times;</span>
+                    <div class="form-content">
+                        <h1 class="title-form">Atualizar Produto</h1>
+                        <p class="p-form">Click on "+" to Add the desired Input</p>
+                        <form action="#" class="form-patch">
+                            <div class="field input-field" id="title-input">
+                                <label for="title">Title:</label>
+                                <input type="text" name="title" class="input">
+                            </div>
+                            <div class="field input-field" id="price-input">
+                                <label for="price">Price:</label>
+                                <input type="number" name="price" class="input" min="0">
+                            </div>
+                            <div class="field input-field" id="description-input">
+                                <label for="description">Description:</label>
+                                <textarea type="text" name="description" class="input"></textarea>
+                            </div>
+                            <div class="field input-field category-input" id="category-input">
+                                <label for="category">Category:</label>
+                                <input type="text" name="category" class="input">
+                            </div>
+
+                            <div class="field input-field file-input" id="file-input">
+                                <label for="image">Add an image:</label>
+                                <input type="file" name="image" placeholder="image">
+                            </div>
+
+                            <div class="field button-field">
+                                <button>Adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/mainProduct.js" type="module"></script>
+    <script src="./js/assets/btn_display_form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

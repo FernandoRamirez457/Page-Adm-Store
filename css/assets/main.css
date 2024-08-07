@@ -1,0 +1,28 @@
+@import url(./reset.css);
+@import url(./sidebar.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #233141;
+}
+
+main {
+  margin-left: 330px;
+  min-height: 100vh;
+  height: 100%;
+  padding: 40px 0;
+  background-color: white;
+  background: url(../../img/wallpaper_branco_preto.jpg) no-repeat bottom center/cover;
+  border-radius: 25px 0 0 0 ;
+  color: #181f2a;
+}
+
+@media (max-width: 900px) {
+  main {
+    margin-top: 70px;
+    padding: 20px;
+    height: 100vh;
+  }
+}
