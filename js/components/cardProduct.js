@@ -5,6 +5,7 @@ export function createProductCard(data) {
     const divisoria = document.createElement('div');
     const h3 = document.createElement('h3');
     const price = document.createElement('p');
+    const viewDetails = document.createElement('a')
     const methodFunctions = document.createElement('div');
     const updateDiv = document.createElement('div');
     const patchDiv = document.createElement('div');
@@ -20,6 +21,9 @@ export function createProductCard(data) {
     divisoria.classList.add('divisoria');
     h3.textContent = data.title;
     price.textContent = 'R$ ' + data.price;
+    viewDetails.textContent = 'View Details';
+    viewDetails.id = data.id;
+    viewDetails.classList.add('view-details')
 
     methodFunctions.classList.add('method-functions');
     updateDiv.classList.add('update');
@@ -47,6 +51,7 @@ export function createProductCard(data) {
     product.appendChild(divisoria);
     product.appendChild(h3);
     product.appendChild(price);
+    product.appendChild(viewDetails)
     baseProduct.appendChild(product);
     baseProduct.appendChild(methodFunctions);
 

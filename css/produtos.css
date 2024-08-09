@@ -170,6 +170,12 @@
   font-size: 15px;
 }
 
+.product a {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #3881ff;
+}
+
 .method-functions {
   display: flex;
   flex-direction: column;

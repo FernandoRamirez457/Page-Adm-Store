@@ -125,3 +125,24 @@ formPatch.addEventListener("submit", async (event) => {
     AlertError("Houve um problema ao atualizar o produto. Tente novamente.")
   };
 });
+
+
+// MODAL PAGE PRODUCT SINGLE
+
+const btnViewDetails = document.querySelectorAll('.view-details')
+console.log(btnViewDetails)
+
+btnViewDetails.forEach(view => {
+  const modalProduct = document.getElementById("product-single");
+  const closeModalBtn = document.querySelectorAll(".close");
+
+  view.addEventListener("click", () => {
+    modalProduct.style.display = "flex"
+  });
+
+  closeModalBtn.forEach((close) => {
+    close.addEventListener("click", () => {
+      modalProduct.style.display = "none"
+    });
+  });
+});
