@@ -1,7 +1,9 @@
+/* MAIN CONTAINER */
 .main {
   position: relative;
 }
 
+/* RETURN BUTTON */
 .btn-return {
   height: 40px;
   width: 40px;
@@ -16,6 +18,7 @@
   left: 50px;
 }
 
+/* INTRODUCTION SECTION */
 .introduction {
   padding: 10px 50px;
   display: flex;
@@ -25,6 +28,7 @@
   margin-top: 30px;
 }
 
+/* CONTENT IN INTRODUCTION */
 .introduction .content-introduction {
   display: flex;
   flex-direction: column;
@@ -41,6 +45,7 @@
   font-weight: 400;
 }
 
+/* ADD PRODUCT BUTTON */
 .introduction .btn-add-product {
   padding: 10px 30px;
   background-color: #25292e;
@@ -50,6 +55,7 @@
   font-size: 17px;
 }
 
+/* FILTERS SECTION */
 .filtros-base {
   width: 100%;
   height: auto;
@@ -59,6 +65,7 @@
   align-content: center;
 }
 
+/* FILTERS */
 .filtros {
   display: flex;
   gap: 30px;
@@ -82,6 +89,7 @@
   border: 2px solid gray;
 }
 
+/* SEARCH CONTAINER */
 .search-container {
   height: 36px;
   width: auto;
@@ -112,6 +120,7 @@
   border-radius: 0 6px 6px 0;
 }
 
+/* PRODUCTS CONTAINER */
 .container-products {
   margin: 20px 50px;
   background-color: rgb(255, 255, 255);
@@ -129,8 +138,9 @@
   position: relative;
 }
 
+/* INDIVIDUAL PRODUCT */
 .product {
-  height: 420px;
+  height: 440px;
   width: 300px;
   background-color: white;
   padding: 17px;
@@ -143,6 +153,7 @@
   z-index: 1;
   text-align: center;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .product:hover {
@@ -150,10 +161,11 @@
 }
 
 .product img {
-  height: 250px;
-  width: 90%;
+  height: 230px;
+  width: 89%;
 }
 
+/* PRODUCT DIVIDER */
 .product .divisoria {
   height: 1px;
   width: 100%;
@@ -167,15 +179,22 @@
 }
 
 .product p {
-  font-size: 15px;
+  font-size: 19px;
 }
 
-.product a {
+/* PRODUCT BUTTON */
+.product button {
+  border: none;
+  background-color: white;
   margin-top: 20px;
-  font-size: 13px;
+  font-size: 14px;
   color: #3881ff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
 }
 
+/* METHOD FUNCTIONS */
 .method-functions {
   display: flex;
   flex-direction: column;
@@ -201,6 +220,7 @@
   gap: 15px;
 }
 
+/* UPDATE BUTTON */
 .method-functions .update {
   height: 40px;
   width: 40px;
@@ -212,6 +232,7 @@
   font-size: 17px;
 }
 
+/* PATCH BUTTON */
 .method-functions .patch {
   height: 40px;
   width: 40px;
@@ -223,6 +244,7 @@
   font-size: 17px;
 }
 
+/* DELETE BUTTON */
 .method-functions .delete {
   height: 40px;
   width: 40px;
@@ -232,4 +254,102 @@
   justify-content: center;
   align-items: center;
   font-size: 17px;
+}
+
+/* RESPONSIVE MEDIAS QUERIES */
+@media (max-width: 1315px) {
+  .container-products {
+      margin: 20px 30px;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-return {
+      left: 30px;
+  }
+
+  .introduction {
+      padding: 10px 30px;
+      margin-top: 60px;
+  }
+
+  .introduction .content-introduction h3 {
+      font-size: 26px;
+  }
+
+  .introduction .content-introduction p {
+      font-size: 14px;
+  }
+
+  .introduction .btn-add-product {
+      padding: 10px 30px;
+      font-size: 12px;
+  }
+
+  .filtros-base {
+      padding: 10px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      gap: 20px;
+  }
+
+  .filtros {
+      gap: 20px;
+  }
+
+  .filtros .category-product p {
+      font-size: 12px;
+  }
+
+  .filtros .category-product input {
+      padding: 10px;
+      width: 40px;
+      border-radius: 10px;
+      border: 2px solid gray;
+  }
+
+  .search-container {
+      height: 36px;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      background-color: gray;
+      border-radius: 7px;
+      padding: 1px;
+      gap: 1px;
+      margin: auto;
+  }
+
+  .container-products {
+      margin: 20px 30px;
+      justify-content: center;
+      padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .filtros .category-product p {
+      font-size: 10px;
+  }
+
+  .filtros .category-product input {
+      padding: 7px;
+      width: 35px;
+      border-radius: 10px;
+      border: 2px solid gray;
+  }
+
+  .container-products {
+      margin: 20px 30px;
+  }
+
+  .product {
+      height: 440px;
+      width: 250px;
+  }
 }

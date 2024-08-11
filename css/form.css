@@ -1,3 +1,4 @@
+/* MODAL */
 .modal {
   position: fixed;
   z-index: 1010;
@@ -27,6 +28,101 @@
   cursor: pointer;
 }
 
+/* FORMS */
+.form {
+  min-height: 340px;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.title-form {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.p-form {
+  text-align: center;
+}
+
+/* FORMS FIELDS */
+.field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.field label {
+  font-weight: 500;
+}
+
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.field input {
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid #cacaca;
+}
+
+.field input:focus {
+  border-bottom-width: 2px;
+}
+
+.field button {
+  color: #fff;
+  background-color: #0171d3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.field button:hover {
+  background-color: #016dcb;
+}
+
+textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  margin-bottom: 20px;
+  border: 1px solid #cacaca;
+  outline: none;
+}
+
+.field textarea:focus {
+  border-bottom-width: 2px;
+}
+
+/* CATEGORY INPUT */
+.category-input {
+  margin-top: 60px;
+}
+
+/* FILE INPUT */
+.file-input input {
+  padding: 12px;
+}
+
+/* BASE FORM */
 .base-form {
   width: 500px;
   display: flex;
@@ -34,6 +130,7 @@
   gap: 20px;
 }
 
+/* BUTTON ADD INPUI */
 .base-btn-add-input {
   display: flex;
   flex-direction: column;
@@ -114,8 +211,7 @@
   margin-left: 12px;
 }
 
-
-
+/* CONTENT BUTTON SHOW*/
 .content-btn.show {
   max-height: 500px;
   opacity: 1;
@@ -146,102 +242,138 @@
   transition-delay: 0.5s;
 }
 
-
-
-.form {
-  min-height: 340px;
-  max-width: 430px;
-  width: 100%;
-  padding: 30px;
-  border-radius: 6px;
-  background: white;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-form {
-  margin-top: 30px;
-}
-
-.title-form {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.p-form{
-  text-align: center;
-}
-
-.field {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.field label {
-  font-weight: 500;
-}
-
-.field input,
-.field button {
-  height: 100%;
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  border-radius: 6px;
-}
-
-.field input {
-  outline: none;
-  padding: 0 15px;
-  border: 1px solid #cacaca;
-}
-
-.field input:focus {
-  border-bottom-width: 2px;
-}
-
-.field button {
-  color: #fff;
-  background-color: #0171d3;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.field button:hover {
-  background-color: #016dcb;
-}
-
-.category-input {
-  margin-top: 60px;
-}
-
-.file-input input{
-  padding: 12px;
-}
-
-textarea {
-  width: 100%;
-  height: 70px;
-  resize: none;
-  margin-bottom: 20px;
-  border: 1px solid #cacaca;
-  outline: none;
-}
-
-.field textarea:focus {
-  border-bottom-width: 2px;
-}
-
+/* FORM INPUT PATCH*/
 form #title-input,
 form #price-input,
 form #description-input,
 form #category-input,
-form #file-input{
+form #file-input {
   display: none;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 500px) {
+  .base-form {
+    gap: 5px;
+  }
+  
+  #modalPatch .form {
+    width: 350px;
+    padding: 20px;
+  }
+
+  .field:nth-child(1) {
+    margin-top: 0px;
+  }
+
+  #modalPatch .close {
+    font-size: 25px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .btn_add_input {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .btn_add_input:hover {
+    width: 80px;
+  }
+
+  .btn_add_input .text {
+    opacity: 1;
+    margin-right: 7px;
+  }
+
+  .btn-plus {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .base-form {
+    gap: 5px;
+  }
+
+  #modalPatch .form {
+    width: 330px;
+  }
+
+  #modalPatch .close {
+    font-size: 25px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .btn_add_input {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .btn_add_input:hover {
+    width: 80px;
+  }
+
+  .btn_add_input .text {
+    opacity: 1;
+    margin-right: 7px;
+  }
+
+  .btn-plus {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .base-form {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  #modalPatch .form {
+    min-height: 340px;
+    max-width: 400px;
+    width: 300px;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  #modalPatch .close {
+    font-size: 25px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .base-btn-add-input {
+    margin-top: 30px;
+  }
+
+  .btn_add_input {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .btn_add_input:hover {
+    width: 80px;
+  }
+
+  .btn_add_input .text {
+    opacity: 1;
+    margin-right: 7px;
+  }
+
+  .btn-plus {
+    height: 40px;
+    width: 40px;
+  }
 }

@@ -2,6 +2,7 @@ export function setupModals() {
   const modalAdd = document.getElementById("modalAdd");
   const modalUpd = document.getElementById("modalUpd");
   const modalPatch = document.getElementById("modalPatch");
+  const modalProduct = document.getElementById("product-single")
   const closeModalBtn = document.querySelectorAll(".close");
   const btnAdd = document.querySelector(".btn-add-product");
 
@@ -14,8 +15,9 @@ export function setupModals() {
       modalAdd.style.display = "none"
       modalUpd.style.display = "none"
       modalPatch.style.display = "none"
+      modalProduct.style.display = "none"
     });
   });
 
-  return { modalAdd, modalUpd , modalPatch};
+  return { modalAdd, modalUpd , modalPatch, modalProduct};
 }

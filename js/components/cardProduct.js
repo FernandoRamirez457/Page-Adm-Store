@@ -5,7 +5,7 @@ export function createProductCard(data) {
     const divisoria = document.createElement('div');
     const h3 = document.createElement('h3');
     const price = document.createElement('p');
-    const viewDetails = document.createElement('a')
+    const viewDetails = document.createElement('button')
     const methodFunctions = document.createElement('div');
     const updateDiv = document.createElement('div');
     const patchDiv = document.createElement('div');

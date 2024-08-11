@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     main.classList.toggle("sidebar-visible");
   });
 
-  // Função para lidar com a visibilidade do header
+  
   const handleHeaderVisibility = () => {
     if (window.innerWidth > 900) {
       header.classList.remove("hidden");

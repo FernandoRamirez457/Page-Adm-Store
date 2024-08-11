@@ -22,7 +22,7 @@ main {
 @media (max-width: 900px) {
   main {
     margin-top: 70px;
-    padding: 20px;
+    padding: 20px 5px;
     height: 100vh;
   }
 }
